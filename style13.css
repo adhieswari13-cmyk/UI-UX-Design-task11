@@ -1,0 +1,380 @@
+/* ================= GENERAL ================= */
+
+body {
+    background-color: #f5f7fb;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    background: #212529;
+    color: white;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+
+    margin-bottom: 35px;
+}
+
+.logo i {
+    margin-right: 8px;
+}
+
+.sidebar .nav-link {
+    color: #adb5bd;
+
+    padding: 12px 15px;
+
+    margin-bottom: 8px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background: #0d6efd;
+    color: white;
+}
+
+.sidebar-bottom {
+    position: absolute;
+
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+}
+
+
+/* ================= MAIN CONTENT ================= */
+
+.main-content {
+    margin-left: 250px;
+    min-height: 100vh;
+}
+
+
+/* ================= TOP NAVBAR ================= */
+
+.top-navbar {
+    height: 70px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 999;
+}
+
+
+/* ================= DASHBOARD ================= */
+
+.dashboard-content {
+    padding: 30px;
+}
+
+
+/* ================= METRIC CARDS ================= */
+
+.metric-card {
+    border: none;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+}
+
+.metric-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 10px;
+
+    background: #e8f1ff;
+
+    color: #0d6efd;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+}
+
+
+/* ================= CHART ================= */
+
+.chart-container {
+    height: 300px;
+
+    display: flex;
+    align-items: end;
+
+    padding: 20px;
+}
+
+.bar-chart {
+    width: 100%;
+    height: 250px;
+
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.bar {
+    width: 7%;
+
+    background: #0d6efd;
+
+    border-radius: 6px 6px 0 0;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.bar:hover {
+    opacity: 0.75;
+}
+
+.bar span {
+    position: absolute;
+
+    top: 100%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    margin-top: 8px;
+
+    font-size: 12px;
+
+    color: #6c757d;
+}
+
+
+/* ================= CHART SELECT ================= */
+
+.chart-select {
+    width: 100px;
+}
+
+
+/* ================= DONUT CHART ================= */
+
+.status-chart {
+    display: flex;
+
+    justify-content: center;
+
+    margin: 20px 0;
+}
+
+.donut {
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            #198754 0deg 216deg,
+            #ffc107 216deg 306deg,
+            #dc3545 306deg 360deg
+        );
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.donut::before {
+    content: "";
+
+    position: absolute;
+}
+
+.donut-inner {
+    width: 115px;
+    height: 115px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.donut-inner small {
+    font-size: 12px;
+
+    font-weight: normal;
+
+    color: #6c757d;
+}
+
+
+/* ================= STATUS LIST ================= */
+
+.status-list > div {
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 12px;
+}
+
+.status-list strong {
+    margin-left: auto;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    margin-right: 10px;
+}
+
+.completed {
+    background: #198754;
+}
+
+.pending {
+    background: #ffc107;
+}
+
+.cancelled {
+    background: #dc3545;
+}
+
+
+/* ================= TABLE ================= */
+
+.table th {
+    font-size: 14px;
+
+    color: #6c757d;
+}
+
+.table td {
+    font-size: 14px;
+}
+
+
+/* ================= USERS ================= */
+
+.user-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.user-item:last-child {
+    border-bottom: none;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #e8f1ff;
+
+    color: #0d6efd;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    font-size: 14px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .dashboard-content {
+        padding: 20px 15px;
+    }
+
+    .hero-section {
+        padding-top: 70px;
+    }
+
+}@charset "utf-8";
+/* CSS Document */
+
